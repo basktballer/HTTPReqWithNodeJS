@@ -13,7 +13,7 @@ module.exports = function getHTML(options, callback) {
       response.on('end', function(){
         console.log("Response stream complete.");
         for (var i = 0; i < buffer.length; i++) {
-          console.log(buffer[i]);
+          callback(buffer[i]);
         }
       });
     });
